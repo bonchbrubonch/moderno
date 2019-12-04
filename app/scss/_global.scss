@@ -12,7 +12,6 @@ a{
     display: inline-block;
     text-decoration: none;
     color: $text;
-
 }
 ul,
 li{
@@ -26,7 +25,25 @@ body{
     font-size: 15px;
     line-height: 24px;
     color: $text;
-
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+html,
+body {
+	height: 100%;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.content {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
 }
 .container{
     max-width: 1200px;
@@ -41,7 +58,10 @@ body{
 
 @media (max-width: 720px){
         padding: 0 15px;
+}
 
+.page-content{
+  background-color: $grey;
 }
 
 .title{
@@ -56,4 +76,34 @@ body{
 .rate-star{
     display: inline-block;
     margin-right: 13px;
+}
+
+.breadcrumbs{
+    &__inner{
+      padding: 45px 0px 40px;
+    }
+    &__list{
+      li{
+        display: inline-block;
+        position: relative;
+        & + li{
+          padding-left: 24px;
+           &::before{
+          content:"-";
+            left: 8px;
+            position: absolute;
+            color: $green;
+          }
+        }
+        &:last-child{
+          a,
+          span{
+            color: $bg;
+          }
+        }
+      }
+      a{
+        color: #b0bec5;
+      }
+  }
 }
