@@ -1494,12 +1494,17 @@ border-bottom:none;
   display: flex;
   justify-content: space-between;
   padding: 30px 0;
+  .jq-selectbox__select {
+    padding-right: 40px;
+  }
 }
+
 .price__product{
   font-size: 22px;
   @include f500;
   color: $red;
 }
+
 .product__price{
   button{
     margin-bottom: 7px;
@@ -1895,6 +1900,29 @@ border-bottom:none;
     border: 1px solid #dedede;
     color: #707070;
   }
+}
+.jq-selectbox__select {
+    height: 40px;
+    padding: 0px 18px;
+    border: 1px solid #d7d7d7;
+    border-bottom-color: #d7d7d7;
+    border-radius: 0;
+    background: #f9f9f9;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Roboto-Regular', sans-serif;
+    color: #707070;
+    text-shadow: none;
+    line-height: 40px;
+}
+.jq-selectbox {
+    z-index: 10;
+    cursor: pointer;
+    width: 100%;
+}
+.jq-selectbox__trigger-arrow{
+    top: 18px;
+    right: 11px;
 }
 /*end settings*/
 
